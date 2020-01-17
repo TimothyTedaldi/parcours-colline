@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    let myArray = document.createElement("table");
+    for (let i = 0; i < 10; i++) {
+        let tblRow = document.createElement("tr");
+        let tblCol = document.createElement("td");
+        tblCol.innerHTML = "Fuck Souffiane !";
+        tblRow.appendChild(tblCol);
+        myArray.appendChild(tblRow);
+    }
+    document.getElementById("target").appendChild(myArray);
 })();
+

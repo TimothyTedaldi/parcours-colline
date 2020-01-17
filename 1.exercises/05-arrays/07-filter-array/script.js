@@ -90,4 +90,10 @@
    //TO BE COMPLETED
 
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        const result= people.filter(someone=>someone.age>18)
+
+        console.log(result)
+    });
+        
 })();

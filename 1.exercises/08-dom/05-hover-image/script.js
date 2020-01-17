@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    var myImg = document.getElementsByTagName('img')[0];
+    var myNewSrc = myImg.getAttribute("data-hover");
+    myImg.addEventListener("mouseover", mouseOver)
+
+    function mouseOver() {
+        myImg.setAttribute('src', myNewSrc)
+    }
+
 })();

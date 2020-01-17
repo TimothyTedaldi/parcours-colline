@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    var myImgSrc = document.getElementById("source").getAttribute("data-image");
+    var img = document.createElement('img');
+    img.src = myImgSrc
+    document.getElementById('target').appendChild(img);
+    document.getElementById('source').removeChild()
+    
 })();

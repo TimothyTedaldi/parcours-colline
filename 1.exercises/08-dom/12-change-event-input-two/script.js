@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    let input = document.getElementById("pass-one");
+    input.addEventListener("input", () => {
+        let letters = document.getElementById("pass-one").value.split('');
+        let number = 0;
+        for (let i = 0; i < letters.length; i++) {
+            if (!isNaN(letters[i])) {
+                number++;
+            }
+        }
+        if (number >= 2 & letters.length >= 8) {
+            document.getElementById("validity").innerHTML = "ok";
+        } else {
+            document.getElementById("validity").innerHTML = "Pas ok";
+        }
+    });
 })();

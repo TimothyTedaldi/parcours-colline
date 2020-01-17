@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    let input = document.getElementById("pass-one");
+    input.setAttribute("maxlength", 10);
+    input.addEventListener("input", () => {
+        let letters = document.getElementById("pass-one").value.split('');
+        document.getElementById("counter").innerHTML = letters.length + "/10";
+    });
 })();

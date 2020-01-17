@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+
+    document.getElementById('run').addEventListener("click", () => {
+        if (document.getElementById('pass-one').value !== document.getElementById('pass-two').value){
+            document.getElementById('pass-one').style.borderColor = 'red';
+            document.getElementById("pass-one").classList.add("error");
+            document.getElementById('pass-two').style.borderColor = 'red';
+            document.getElementById("pass-two").classList.add("error");
+        }
+        else{
+            document.getElementById('pass-one').style.borderColor = 'green';
+            document.getElementById('pass-two').style.borderColor = 'green';
+        }
+    });
 })();

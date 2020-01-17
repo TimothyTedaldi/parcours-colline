@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    let myArray = document.createElement("table");
+    for (let x = 0; x < 10; x++) {
+        let tblRow = document.createElement("tr");
+        let tblCol = document.createElement("td");
+        for (let y = 0; y < 10; y++) {
+            tblCol.innerHTML += y + 1;
+            tblCol.innerHTML += " * ";
+            tblCol.innerHTML += x + 1;
+            tblCol.innerHTML += " = ";
+            tblCol.innerHTML += (x + 1) * (y + 1);
+            tblCol.innerHTML += "<br>";
+        }
+        tblRow.appendChild(tblCol);
+        myArray.appendChild(tblRow);
+    }
+    document.getElementById("target").appendChild(myArray);
 })();
