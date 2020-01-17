@@ -26,5 +26,24 @@
         os: "linux",
         user: null,
     };
+
     // your code here
+    document.getElementById('run').addEventListener("click", () => {
+        for (elem in computers){
+            // console.log('Roses are red, Violets are blue, Sugar is sweet, And so is my cat.')
+            if(computers[elem].hasOwnProperty('available')==false){
+                computers[elem].avaible=defaultProps.available;
+            }
+            if(computers[elem].hasOwnProperty('os')==false){ 
+                computers[elem].os=defaultProps.os;
+            }
+            if(computers[elem].hasOwnProperty('user')==false){
+                computers[elem].user=defaultProps.user;
+            }
+        }
+
+        Object.keys(computers).forEach(function (item) {
+            console.log(computers[item]); // value
+        });
+    });
 })();

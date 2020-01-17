@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    class Person{
+        constructor(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        get name() {
+            return this.firstname + ' ' + this.lastname;
+        }
+        set name (aName){
+            let tempArray = this.aName.split(' ');
+            this.firstname = tempArray[0];
+            this.lastname = tempArray[1];
+        }
+    }
+    thisIsAPerson = new Person ('Picasso', 'Tedaldi');
+    console.log(thisIsAPerson.name);
+    thisIsAPerson.aName = "Peluche Tedaldi";
+    console.log(thisIsAPerson);
+
+
+    // sorry if this seems messed up but i didn't understand this exercice
 })();

@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener("click", () => {
+        function someoneIdentity (lastname, firstname, age, city, country){
+            this.lastname=lastname;
+            this.firstname=firstname;
+            this.age=age;
+            this.city=city;
+            this.country=country;
+        }
+        var PikaTed = new someoneIdentity ('Picasso', 'Tedaldi', '13', 'Châtelet', 'Belgique' );
+        console.log(PikaTed);
+    });
+   
 })();

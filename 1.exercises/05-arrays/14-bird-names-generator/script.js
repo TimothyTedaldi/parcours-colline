@@ -37,17 +37,27 @@
         "tangent",
         "arboré",
     ]);
+    function random_adj(adj){
+            return adj[Math.floor(Math.random()*adj.length)];
+        }
 
     function random_birds(birds){
-        return birds[Math.floor(Math.random()*birds.length)].name;
+        return birds[Math.floor(Math.random()*birds.length)];
     }
+
+    let arrayAdj = [];
+    adjectives.forEach(v => arrayAdj.push(v));
     
-    console.log(adjectives)
-
-    console.log(random_birds(birds))
-
     document.getElementById('run').addEventListener("click", () => {
-        console.log("Le " + random_birds(birds) + " " + random_Adjectives(adjectives))
+        let randomBird = random_birds(birds);
+        let randomAdj  = random_adj(arrayAdj);
+        if (randomBird.fem == true){
+            randomAdj += 'e';
+            document.getElementById('target').innerHTML ="La " + randomBird.name + " " + randomAdj
+        }
+        else{
+            document.getElementById('target').innerHTML = "Le " + randomBird.name + " " + randomAdj
+        }
     });
     
     // your code here

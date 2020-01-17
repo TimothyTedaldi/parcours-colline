@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener("click", () => {
+        class Cat {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                
+            }
+            sayHello(){
+                alert("Bonjour, "+ this.firstname + " " + this.lastname);
+            }
+        }
+        var cat1 = new Cat ('Picasso', 'Tedaldi');
+        cat1.sayHello();
+    });
 })();

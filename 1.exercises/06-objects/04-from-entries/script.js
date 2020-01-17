@@ -13,4 +13,15 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+    document.getElementById('run').addEventListener("click", () => {
+        entries=Object.fromEntries(keys.map((_, i) => [keys[i], values[i]]))
+        console.log(entries);
+    });
 })();
+
+
+/* Autres Soluces....
+    var result = {};
+    keys.forEach((key,i) => result[key] = values[i])
+    console.log(result)
+*/
