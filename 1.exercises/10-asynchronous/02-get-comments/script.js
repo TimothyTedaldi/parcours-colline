@@ -11,4 +11,26 @@
 
 (() => {
     // your code here
+    let articles = [];
+
+    function addCom(error, comment) {
+        articles.forEach(element => {
+            element["comments"] = comment;
+        });
+        console.log(articles);
+    }
+
+
+    function getComment(error, article){
+        articles = article;
+        article.forEach(element => {
+            window.lib.getComments(element.id, addCom);
+        });
+    }
+
+
+
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPosts(getComment);
+    });
 })();

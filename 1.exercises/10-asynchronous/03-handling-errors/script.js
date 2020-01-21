@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    function getpseron(error, person) {
+        if (error == null) {
+            console.log(person);
+        } 
+        else {
+            console.log(error);
+        }
+    }
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPersons(getpseron);
+    });
 })();

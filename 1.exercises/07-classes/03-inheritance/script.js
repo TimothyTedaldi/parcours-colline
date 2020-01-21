@@ -18,14 +18,14 @@
     // your code here
     document.getElementById('run').addEventListener("click", () => {
         class Cat extends Animal{
-            static greeting = ('Bonjour');
+            static greeting = 'Wooof';
             constructor(name) {
                 super();
                 this.name= name;
             }
         }
         class Dog extends Animal{
-            static greeting = ('Bonjour');
+            static greeting = ('Meow');
             constructor(name) {
                 super();
                 this.name= name;
