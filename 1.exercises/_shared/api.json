@@ -4,13 +4,20 @@
       "id": 1,
       "name": "Cyclops",
       "alterEgo": "Scott Summers",
-      "abilities": ["Optic force blasts", "Master tactician"]
+      "abilities": [
+        "Optic force blasts",
+        "Master tactician"
+      ]
     },
     {
       "id": 2,
       "name": "Marvel Girl",
       "alterEgo": "Jean Grey",
-      "abilities": ["Telekinesis", "Telepathy", "Astral projection"]
+      "abilities": [
+        "Telekinesis",
+        "Telepathy",
+        "Astral projection"
+      ]
     },
     {
       "id": 3,
@@ -39,6 +46,39 @@
         "Cold and ice manipulation",
         "Ability to assume an enhanced physical form made of solid ice"
       ]
+    },
+    {
+      "name": "SayaiJin",
+      "alterEgo": "Jordan",
+      "abilities": [
+        "none he is useless"
+      ],
+      "id": 6
+    },
+    {
+      "name": "FuckSouff",
+      "alterEgo": "Soufiane Amjahad",
+      "abilities": [
+        "he is capable of dev more than 3 hours in a row",
+        "he can keep Hugo from overworking"
+      ],
+      "id": 8
+    },
+    {
+      "name": "Snowden",
+      "alterEgo": "Hugo Bricoult",
+      "abilities": [
+        "He is unstopable !"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Mini-Yass",
+      "alterEgo": "Yassine",
+      "abilities": [
+        "Zawardo"
+      ],
+      "id": 10
     }
   ]
 }

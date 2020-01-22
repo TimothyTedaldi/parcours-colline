@@ -11,6 +11,8 @@
 
 (() => {
     // your code here
+    document.getElementById('unlimited_power').innerHTML= 'Pouvoir(s) séparés via , :'
+
     document.getElementById("run").addEventListener("click", () => {
         let aName = document.getElementById("hero-name").value;
         let aAlterEgo = document.getElementById("hero-alter-ego").value;
@@ -43,8 +45,19 @@
 
         if (aName != '' && aName != ' ' && aName != "don't leave a blank !"  && aAlterEgo != '' && aAlterEgo != ' ' && aAlterEgo != "don't leave a blank !" && aBunchOfPowers != ''  && aBunchOfPowers != ' ' && aBunchOfPowers !="don't leave a blank !"){
             alert('FUCK SOUFIANE')
+            let powers = aBunchOfPowers.split(', ')
+            let hero = {
+                name: aName,
+                alterEgo: aAlterEgo,
+                abilities: powers
+            };
+            let request = fetch("http://localhost:3000/heroes", {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body: JSON.stringify(hero)
+            }).then((res) => console.log(res)).catch((res) => console.log(res));
         }
-       
-
     });
 })();
