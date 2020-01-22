@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let promise = window.lib.getPosts();
+        (async() => {
+            let result = await promise;
+            result.forEach(element => {
+                let proCom = window.lib.getComments(element.id);
+                (async() => {
+                    let res = await proCom;
+                    element["comments"] = res;
+                })();
+            });
+            console.log(result);
+        })();
+    });
 })();

@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let promise = fetch("http://localhost:3000/heroes").then(rs => rs.json());
+        promise.then(val => console.log(val));
+    });
 })();
